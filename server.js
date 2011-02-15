@@ -47,6 +47,7 @@ io.on('connection', function(client){
 	client.on('message', function(message){
 		client.broadcast(message);
 		client.send(message);
+        console.log('Message resieved: ' + message);
 	});
 	client.on('disconnect', function(){
 		console.log('Client Disconnected.');
